@@ -4,28 +4,25 @@ body {
   font-family: PT Sans;
   font-size: 14px;
   line-height: 21px;
+  background-color: #f2f2f2;
 }
 h1 {
-  font-family: PT Sans;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
   text-align: center;
 }
 h2 {
-  font-family:  PT Sans;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 h3 {
-  font-family:  PT Sans;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
 }
 h4 {
-  font-family:  PT Sans;
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
@@ -38,9 +35,15 @@ ul li {
   list-style-type: none;
   font-weight: bold;
 }
+nav a {
+  text-decoration: none;
+  color: black;
+}
 .container {
   width: 1200px;
   margin: 0 auto;
+  background-color: #fefefe;
+  box-shadow: 0px 0px 50px 0px #dbdbdb;
 }
 .main-navigation ul {
   display: flex;
@@ -54,6 +57,9 @@ ul li {
 .logo {
   position: absolute;
   top: 0;
+  width: 138px;
+  left: 50%;
+  margin-left: -69px;
 }
 .index-logo {
   background: #dbeaf1 url(../img/bg-index.jpg);
@@ -197,7 +203,7 @@ input[type="submit"] {
   justify-content: center;
   min-height: 120px;
 }
-.main-footer div {
+.main-footer .footer-block {
   width: 400px;
   display: flex;
   justify-content: center;;
@@ -403,3 +409,5 @@ article{
   color: #666;
   background: #f2f2f2;
 }
+/*еще filters-text = item-pic*/
+/*разобраться с центровкой контейнера*/
