@@ -1,7 +1,7 @@
 body {
   text-transform: uppercase;
   color: #000000;
-  font-family: PT Sans;
+  font-family: 'PT Sans', sans-serif;
   font-size: 14px;
   line-height: 21px;
   background-color: #f2f2f2;
@@ -47,12 +47,16 @@ nav a {
 }
 .main-navigation ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  min-height: 56px;
+  padding: 17px 72px;
 }
 .main-navigation li:nth-child(2) {
   margin-right: 230px;
+  margin-left: -15px;
+}
+.main-header{
+  position: relative;
 }
 .logo {
   position: absolute;
@@ -63,21 +67,25 @@ nav a {
 }
 .index-logo {
   background: #dbeaf1 url(../img/bg-index.jpg);
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 508px;
+  /*min-height: 508px;*/
   justify-content: space-between;
 }
  .index-logo img:first-child {
-   margin-top: 80px;
+   margin-top: 77px;
+   margin-bottom: 23px;
 }
 .intro {
    display: flex;
-   min-height: 216px;
+   /*min-height: 216px;*/
    flex-direction: column;
    align-items: center;
-   justify-content: space-around;;
+   justify-content: space-around;
+   padding-top: 46px;
+   padding-bottom: 41px;
  }
 .reasons {
   display: flex;
@@ -98,20 +106,25 @@ nav a {
 }
 .services {
   display: flex;
-  min-height: 330px;
   align-items: baseline;
 }
 .services-item {
-  margin:60px 0;
+  margin-top: 56px;
+  margin-bottom: 69px;
   width: 400px;
   text-align: center;
 }
+.services-item h2{
+  margin: 23px 0;
+}
 .reasons-gray {
   background-color: #eeeeee;
-  min-height: 256px;
+  /*min-height: 256px;*/
 }
 .reasons-gray .reason-item {
-  margin:60px 0;
+  margin-top: 29px;
+  margin-bottom: 59px;
+  outline: 1px solid red;
 }
 .interest {
   display: flex;
@@ -119,11 +132,12 @@ nav a {
   align-items: center;
   justify-content: flex-end;
   text-align: center;
-  min-height: 291px;
+  /*min-height: 291px;*/
 }
 .interest h3{
   font-size: 30px;
   line-height: 24px;
+  margin-top: 56px;
 }
 /*cтили большой коричневой кнопки*/
 .interest .brown-btn {
@@ -131,7 +145,8 @@ nav a {
   font-weight: bold;
   line-height: 26px;
   text-align: center;
-  padding: 20px 140px;
+  padding: 30px 140px;
+  margin-top: 25px;
 }
 .brown-btn,
 .brown-btn:visited {
@@ -164,8 +179,10 @@ nav a {
   justify-content: center;
   background: #ffffff;
   width: 568px;
-  min-height: 395px;
+  /*min-height: 395px;*/
   margin: auto;
+  padding: 55px;
+  box-sizing: border-box;
 }
 input[type="date"] {
   width: 350px;
@@ -173,6 +190,7 @@ input[type="date"] {
   margin-left: 10px;
   background-color: #f2f2f2;
   border: 0px;
+  margin-bottom: 30px;
 }
 input[type="number"] {
   width: 38px;
@@ -196,18 +214,23 @@ input[type="submit"] {
   border: 0px;
   background-color: #81b3d2;
   text-transform: uppercase;
+  color:#ffffff;
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: 51px;
 }
 /*FOOTER*/
 .main-footer {
   display: flex;
   justify-content: center;
-  min-height: 120px;
+  /*min-height: 120px;*/
 }
 .main-footer .footer-block {
   width: 400px;
   display: flex;
   justify-content: center;;
   align-items: center;
+  padding: 36px;
 }
 .footer-hashtag a:link,
 .footer-hashtag a:hover,
@@ -237,7 +260,7 @@ input[type="submit"] {
 }
 .options form{
   display: flex;
-  min-height: 217px;
+  /*min-height: 217px;*/
   /*padding: 0 72px;*/
   justify-content: space-between;
 }
@@ -333,7 +356,7 @@ article{
 }
 /* ОТЕЛИ */
 .item {
-  min-height: 150px;
+  /*min-height: 150px;*/
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -345,7 +368,7 @@ article{
 .item > div:nth-child(2) {
   flex-grow: 2;
   margin-left: 30px;
-  min-height: 90px;
+  /*min-height: 90px;*/
 }
 .item h1 a,
 .item h1 a:visited,
