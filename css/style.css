@@ -174,35 +174,69 @@ nav a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  align-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   background: #ffffff;
   width: 568px;
-  /*min-height: 395px;*/
   margin: auto;
   padding: 55px;
   box-sizing: border-box;
+  font-weight: bold;
+  vertical-align: middle;
 }
-input[type="date"] {
-  width: 350px;
+.main-form input{
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.half-width {
+  font-size: 0;
+  line-height: 0;
+  outline: 1px solid red;
+  flex-grow: 2;
+  text-align: right;
+}
+.half-width span{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  margin-right: 27px;
+}
+.adult {
+  text-align: left;
+}
+.adult span{
+  margin-right: 40px;
+}
+input[type="text"] {
+  width: 346px;
   height: 38px;
-  margin-left: 10px;
+  padding: 14px;
+  margin-left: 16px;
   background-color: #f2f2f2;
-  border: 0px;
-  margin-bottom: 30px;
+  border: none;
+  margin-bottom: 29px;
+  box-sizing: border-box;
 }
 input[type="number"] {
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
-  border: 0px;
+  border: 2px solid #f2f2f2;
+  outline: none;
+  text-align: center;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: right;
 }
 button[type="button"] {
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
   border: 0px;
+  outline: none;
   vertical-align: middle;
 }
 button[type="button"]:first-child {
@@ -217,7 +251,7 @@ input[type="submit"] {
   color:#ffffff;
   font-weight: bold;
   font-size: 21px;
-  margin-top: 51px;
+  margin-top: 55px;
 }
 /*FOOTER*/
 .main-footer {
