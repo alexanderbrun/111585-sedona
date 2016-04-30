@@ -66,8 +66,7 @@ nav a {
   margin-left: -69px;
 }
 .index-logo {
-  background: #dbeaf1 url(../img/bg-index.jpg);
-  background-position: top;
+  background: #dbeaf1 url(../img/bg-index.jpg) no-repeat 50% -55px ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,22 +78,27 @@ nav a {
    margin-bottom: 23px;
 }
 .intro {
-   display: flex;
-   /*min-height: 216px;*/
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-around;
    padding-top: 46px;
-   padding-bottom: 41px;
+   padding-bottom: 39px;
+   text-align: center;
+ }
+ .intro h1 {
+   margin-bottom: 30px;
  }
 .reasons {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
-
 .reason-item {
   width: 400px;
   text-align: center;
+}
+.reasons-blue h2{
+  margin-top: 54px;
+  margin-bottom: 24px;
+}
+.reasons-blue p{
+  margin-top: 21px;
 }
 .reasons-blue {
   background: #81b3d2;
@@ -119,25 +123,33 @@ nav a {
 }
 .reasons-gray {
   background-color: #eeeeee;
-  /*min-height: 256px;*/
 }
 .reasons-gray .reason-item {
-  margin-top: 29px;
-  margin-bottom: 59px;
-  outline: 1px solid red;
+  padding-bottom: 45px;
+}
+.reasons-gray h2{
+  margin-top: 47px;
+  margin-bottom: 24px;
+}
+.reasons-gray p{
+  margin-top: 21px;
 }
 .interest {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   text-align: center;
-  /*min-height: 291px;*/
 }
 .interest h3{
   font-size: 30px;
   line-height: 24px;
   margin-top: 56px;
+  margin-bottom: 16px;
+}
+.interest p{
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 22px;
 }
 /*cтили большой коричневой кнопки*/
 .interest .brown-btn {
@@ -162,9 +174,8 @@ nav a {
 .brown-btn:active {
   background-color: #503e33;
   text-decoration: none;
-  color:#ffffff;
+  color: rgba(255, 255, 255, 0.3);
 }
-
 /* ФОРМА ГЛАВНОЙ*/
 .map {
   background: #f2f1ef url(../img/map.png);
@@ -188,11 +199,11 @@ nav a {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  outline: none;
 }
 .half-width {
   font-size: 0;
   line-height: 0;
-  outline: 1px solid red;
   flex-grow: 2;
   text-align: right;
 }
@@ -220,6 +231,19 @@ input[type="text"] {
   margin-bottom: 29px;
   box-sizing: border-box;
 }
+.calendar{
+  position: absolute;
+  transform: translate(424px, -59px);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 22px;
+  background-position: -230px -5px;
+}
+.out-calendar{
+  transform: translate(428px, -59px);
+}
+
 input[type="number"] {
   width: 38px;
   height: 38px;
@@ -239,6 +263,23 @@ button[type="button"] {
   outline: none;
   vertical-align: middle;
 }
+button[type="button"]::before{
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+.plus::before{
+  width: 11px;
+  height: 11px;
+  background-position: -312px -173px;
+}
+.minus::before{
+  width: 12px;
+  height: 3px;
+  background-position: -246px -173px;
+}
 button[type="button"]:first-child {
   margin-left: 10px;
 }
@@ -252,6 +293,16 @@ input[type="submit"] {
   font-weight: bold;
   font-size: 21px;
   margin-top: 55px;
+}
+input[type="submit"]:hover {
+  background-color: #669ec0;
+  text-decoration: none;
+  color:#ffffff;
+}
+input[type="submit"]:active {
+  background-color: #5496bd;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 /*FOOTER*/
 .main-footer {
@@ -277,13 +328,81 @@ input[type="submit"] {
   line-height: 26px;
   text-align: center;
 }
-.footer-social a{
-    width: 46px;
-    height: 48px;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #81b3d2;
-    margin-right: 5px;
+.social-btn{
+  width: 46px;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #81b3d2;
+  margin-right: 4px;
+  margin-left: 2px;
+  font-size: 0;
+  position: relative;
+}
+.social-btn::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+}
+.social-btn:hover{
+  background-color: #669ec0;
+}
+.social-btn:active{
+  background-color: #5496bd;
+}
+.social-btn:active::before{
+  opacity: 0.3;
+}
+.social-btn-fb::before {
+  width: 10px;
+  height: 21px;
+  background-position: -241px -39px;
+}
+.social-btn-twitter::before {
+  width: 17px;
+  height: 15px;
+  background-position: -163px -194px;
+}
+.social-btn-youtube::before {
+  width: 20px;
+  height: 16px;
+  background-position: -246px -194px;
+}
+.academy-logo{
+  display: block;
+  width: 195px;
+  height: 39px;
+}
+.academy-logo::before{
+  content: "";
+  position: absolute;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 195px;
+  height: 39px;
+  background-position: -5px -32px;
+}
+.academy-logo:hover::before{
+  content: "";
+  position: absolute;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 195px;
+  height: 39px;
+  background-position: -5px -130px;
+}
+.academy-logo:active::before{
+  content: "";
+  position: absolute;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  width: 195px;
+  height: 39px;
+  background-position: -5px -130px;
 }
 /* ФОРМА КАТАЛОГА */
 .options {
@@ -468,3 +587,182 @@ article{
 }
 /*еще filters-text = item-pic*/
 /*разобраться с центровкой контейнера*/
+
+.sprite {
+    background-image: url(../img/spritesheet.png)
+    display: block;
+}
+
+.sprite-4stars {
+    width: 89px;
+    height: 17px;
+    background-position: -5px -5px;
+}
+
+.sprite-academy-logo {
+    width: 195px;
+    height: 39px;
+    background-position: -5px -32px;
+}
+
+.sprite-academy-logo-down {
+    width: 195px;
+    height: 39px;
+    background-position: -5px -81px;
+}
+
+.sprite-academy-logo-hvr {
+    width: 195px;
+    height: 39px;
+    background-position: -5px -130px;
+}
+
+.sprite-arrow-1 {
+    width: 11px;
+    height: 10px;
+    background-position: -104px -5px;
+}
+
+.sprite-arrow-1-down-active {
+    width: 11px;
+    height: 10px;
+    background-position: -125px -5px;
+}
+
+.sprite-arrow-1-hvr {
+    width: 11px;
+    height: 10px;
+    background-position: -146px -5px;
+}
+
+.sprite-arrow-2 {
+    width: 11px;
+    height: 10px;
+    background-position: -167px -5px;
+}
+
+.sprite-arrow-2-down-active {
+    width: 11px;
+    height: 10px;
+    background-position: -188px -5px;
+}
+
+.sprite-arrow-2-hvr {
+    width: 11px;
+    height: 10px;
+    background-position: -209px -5px;
+}
+
+.sprite-calendar {
+    width: 21px;
+    height: 22px;
+    background-position: -230px -5px;
+}
+
+.sprite-calendar-down {
+    width: 21px;
+    height: 22px;
+    background-position: -210px -37px;
+}
+
+.sprite-calendar-hvr {
+    width: 21px;
+    height: 22px;
+    background-position: -210px -69px;
+}
+
+.sprite-checkbox {
+    width: 22px;
+    height: 22px;
+    background-position: -210px -101px;
+}
+
+.sprite-checkbox-checked {
+    width: 26px;
+    height: 22px;
+    background-position: -210px -133px;
+}
+
+.sprite-checkbox-checked-disabled {
+    width: 26px;
+    height: 22px;
+    background-position: -210px -165px;
+}
+
+.sprite-checkbox-disabled {
+    width: 22px;
+    height: 22px;
+    background-position: -5px -197px;
+}
+
+.sprite-facebook {
+    width: 10px;
+    height: 19px;
+    background-position: -241px -37px;
+}
+
+.sprite-food {
+    width: 74px;
+    height: 70px;
+    background-position: -37px -179px;
+}
+
+.sprite-gift {
+    width: 64px;
+    height: 76px;
+    background-position: -261px -5px;
+}
+
+.sprite-house {
+    width: 75px;
+    height: 72px;
+    background-position: -246px -91px;
+}
+
+.sprite-qty-btn-minus {
+    width: 12px;
+    height: 3px;
+    background-position: -246px -173px;
+}
+
+.sprite-qty-btn-minus-down {
+    width: 12px;
+    height: 3px;
+    background-position: -268px -173px;
+}
+
+.sprite-qty-btn-minus-hvr {
+    width: 12px;
+    height: 3px;
+    background-position: -290px -173px;
+}
+
+.sprite-qty-btn-plus {
+    width: 11px;
+    height: 11px;
+    background-position: -312px -173px;
+}
+
+.sprite-qty-btn-plus-down {
+    width: 11px;
+    height: 11px;
+    background-position: -121px -194px;
+}
+
+.sprite-qty-btn-plus-hvr {
+    width: 11px;
+    height: 11px;
+    background-position: -142px -194px;
+}
+
+.sprite-twitter {
+    width: 17px;
+    height: 15px;
+    background-position: -163px -194px;
+}
+
+.sprite-youtube {
+    width: 20px;
+    height: 16px;
+    background-position: -246px -194px;
+}

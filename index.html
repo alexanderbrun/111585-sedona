@@ -146,27 +146,29 @@
     <section class="map">
       <!-- <iframe></iframe> -->
       <form class="main-form" action="" method="post" style="">
-        <label>Дата заезда:
+        <label class="date">Дата заезда:
           <input type="text" name="date-in" value="24 Апреля 2016">
+          <a href="#"><i class="in-calendar calendar"></i></a>
         </label>
-        <label>Дата выезда:
+        <label class="date">Дата выезда:
           <input type="text" name="date-out" value="4 Июля 2016">
+          <a href="#"><i class="out-calendar calendar"></i></a>
         </label>
         <div class="half-width adult">
           <label><span>Взрослые:</span>
-            <button type="button" name="plus-adult"></button>
+            <button type="button" class="minus"></button>
             <input type="number" name="" value="2">
-            <button type="button" name="minus-adult"></button>
+            <button type="button" class="plus"></button>
           </label>
         </div>
         <div class="half-width child">
           <label><span>Дети:</span>
-            <button type="button" name="plus-child"></button>
+            <button type="button" class="minus"></button>
             <input type="number" name="" value="0">
-            <button type="button" name="minus-child"></button>
+            <button type="button" class="plus"></button>
           </label>
         </div>
-        <input type="submit" value="Найти">
+        <input class="find-btn" type="submit" value="Найти">
       </form>
     </section>
     <footer class="main-footer">
@@ -176,12 +178,12 @@
             </a>
       </div>
       <div class="footer-block footer-social">
-        <a class="btn social-btn-vk" href="#">VK</a>
-        <a class="btn social-btn-fb" href="#">FB</a>
-        <a class="btn social-btn-inst" href="#">I</a>
+        <a class="social-btn social-btn-twitter" href="#">Twitter</a>
+        <a class="social-btn social-btn-fb" href="#">FB</a>
+        <a class="social-btn social-btn-youtube" href="#">Youtube</a>
       </div>
       <div class="footer-block footer-copyright">
-        <a class="btn" href="https://htmlacademy.ru"><img src="img/academy-logo.png" alt="HTML ACADEMY" width="195" height="39"></a>
+        <a class="academy-logo" href="https://htmlacademy.ru"></a>
       </div>
     </footer>
   </div>
