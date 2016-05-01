@@ -26,28 +26,40 @@
       <section class="options">
         <form>
             <fieldset>
-              <h4>Инфраструктура</h4>
-        			<label><input type="checkbox" checked>Бассейн</label>
-        			<label><input type="checkbox">Парковка</label>
-        		  <label><input type="checkbox">WI-FI</label>
+              <h4>Инфраструктура:</h4>
+              <input type="checkbox" id="ch1" checked>
+        			<label for="ch1">Бассейн</label>
+              <input type="checkbox" id="ch2">
+        			<label for="ch2">Парковка</label>
+              <input type="checkbox" id="ch3">
+        		  <label for="ch3">WI-FI</label>
             </fieldset>
             <fieldset>
-              <h4>Тип жилья</h4>
-      			  <label><input type="checkbox" checked>Гостиница</label>
-      			  <label><input type="checkbox" checked>Мотель</label>
-      		    <label><input type="checkbox" checked>Апартаменты</label>
+              <h4>Тип жилья:</h4>
+              <input type="checkbox" id="ch4" checked>
+      			  <label for="ch4">Гостиница</label>
+              <input type="checkbox" id="ch5" checked>
+      			  <label for="ch5">Мотель</label>
+              <input type="checkbox" id="ch6" checked>
+      		    <label for="ch6">Апартаменты</label>
             </fieldset>
             <fieldset>
               <h4>Стоимость в сутки (р):</h4>
               <div class="price-select">
                 <div class="half-width">
-                  <label>ОТ<input type="number" name="min" value=""></label>
+                  <label>ОТ<input type="text" name="min" value="0"></label>
                 </div>
                 <div class="half-width">
-                  <label>ДО<input type="number" name="min" value=""></label>
+                  <label>ДО<input type="text" name="min" value="3000"></label>
                 </div>
               </div>
-              <div class="range"><input type="range"></div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
               <button type="submit">Показать</button>
             </fieldset>
           </form>

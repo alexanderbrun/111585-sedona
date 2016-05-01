@@ -221,7 +221,7 @@ nav a {
 .adult span{
   margin-right: 40px;
 }
-input[type="text"] {
+.main-form input[type="text"] {
   width: 346px;
   height: 38px;
   padding: 14px;
@@ -244,7 +244,7 @@ input[type="text"] {
   transform: translate(428px, -59px);
 }
 
-input[type="number"] {
+.main-form input[type="number"] {
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
@@ -255,7 +255,7 @@ input[type="number"] {
   vertical-align: middle;
   text-align: right;
 }
-button[type="button"] {
+.main-form button[type="button"] {
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
@@ -263,7 +263,7 @@ button[type="button"] {
   outline: none;
   vertical-align: middle;
 }
-button[type="button"]::before{
+.main-form button[type="button"]::before{
   content: "";
   position: absolute;
   transform: translate(-50%, -50%);
@@ -402,11 +402,11 @@ input[type="submit"]:active {
   background-repeat: no-repeat;
   width: 195px;
   height: 39px;
-  background-position: -5px -130px;
+  background-position: -5px -81px;
 }
 /* ФОРМА КАТАЛОГА */
 .options {
-  background: #6c99c2 url(../img/options-background.png);
+  background: #6c99c2 url(../img/options-background.png) no-repeat 50% -55px;
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
@@ -418,26 +418,31 @@ input[type="submit"]:active {
   justify-content: space-between;
 }
 .options fieldset {
-  display: flex;
-  border: 0px;
-  flex-direction: column-reverse;
-  padding: 10px 72px;
-}
-.options label {
-  margin: 20px 0;
+  border: none;
+  padding: 7px 0px;
+  padding-left: 70px;
 }
 .options fieldset:last-child {
   flex-grow: 2;
   padding-left: 240px;
-/*   text-align: center; */
 }
-.options input[type="number"] {
+.options input[type="text"] {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.0);
+  width: 32px;
+  height: 32px;
+  border: none;
+  font-size: 14px;
+  margin-left: 4px;
+  margin-right: 28px;
+}
+.options .half-width:last-child{
+  padding-right: 20px
 }
 .options .half-width {
   flex-grow: 2;
-  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
 }
 .options .price-select {
   border: 2px solid #ffffff;
@@ -445,21 +450,142 @@ input[type="submit"]:active {
   height: 32px;
   width: 314px;
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  position: relative;
+  top: -12px;
+  right: -10px;
+  font-size: 14px;
+}
+.price-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
 }
 .options button {
   color: #ffffff;
   text-transform: uppercase;
-  width: 133px;
-  height: 32px;
+  width: 137px;
+  height: 36px;
   border: 2px solid #ffffff;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.0);
+  margin-left: 95px;
+  outline: none;
+  font-size: 14px;
+  line-height: 21px;
+  vertical-align: middle;
 }
-button {
-  margin: auto;
+.options button:hover {
+  color: #000000;
+  background: #ffffff;
 }
-
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"] + label{
+  display: block;
+  padding-left: 38px;
+  cursor: pointer;
+  position : relative;
+  font-size: 14px;
+  line-height: 21px;
+  margin:25px 0;
+}
+input[type="checkbox"] + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  width: 22px;
+  height: 22px;
+  background-position: -210px -101px;
+  top: -1px;
+  left: -1px;
+}
+input[type="checkbox"]:checked + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  width: 26px;
+  height: 22px;
+  background-position: -210px -133px;
+  top: -1px;
+  left: -1px;
+}
+input[type="checkbox"]:disabled + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  width: 22px;
+  height: 22px;
+  background-position: -5px -197px;
+  top: -1px;
+  left: -1px;
+}
+input[type="checkbox"]:checked:disabled + label::before{
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  width: 26px;
+  height: 22px;
+  background-position: -210px -165px;
+  top: -1px;
+  left: -1px;
+}
+.options fieldset:nth-child(2){
+  padding-left: 116px;
+}
+.options fieldset:nth-child(3){
+  padding-left: 335px;
+}
+.options .half-width{
+  font-size: inherit;
+}
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+  left: 11px;
+}
+.range-controls .scale {
+  margin-top: 8px;
+  height: 2px;
+  width: 315px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  left: 100px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 63%;
+}
 /*ФИЛЬТРЫ*/
 .filters {
   display: flex;
