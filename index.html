@@ -28,7 +28,7 @@
     </header>
     <section class="index-logo">
       <img src="img/sedona-welcome.png" width="458" height="352" alt="Добро пожаловать в Седону">
-      <img src="img/white-stripe.png" width="1200" height="57">
+      <img src="img/white-stripe.png" width="1200" height="57" alt="welcome">
     </section>
     <section class="intro">
       <h1>
@@ -56,7 +56,7 @@
     </section>
     <section class="services">
       <div class="services-item">
-        <img src="img/house.png" width="75" height="72">
+        <img src="img/house.png" width="75" height="72" alt="Жилье">
         <h2>
             Жилье
           </h2>
@@ -65,7 +65,7 @@
         </p>
       </div>
       <div class="services-item">
-        <img src="img/food.png" width="74" height="70">
+        <img src="img/food.png" width="74" height="70" alt="Еда">
         <h2>
             Еда
           </h2>
@@ -74,7 +74,7 @@
         </p>
       </div>
       <div class="services-item">
-        <img src="img/gift.png" width="64" height="76">
+        <img src="img/gift.png" width="64" height="76" alt="Сувениры">
         <h2>
             Сувениры
           </h2>
@@ -145,28 +145,26 @@
     </section>
     <section class="map">
       <!-- <iframe></iframe> -->
-      <form class="main-form" action="" method="post" style="">
+      <form class="main-form" action="#" method="post" style="">
         <label class="date">Дата заезда:
           <a href="#"><i class="in-calendar calendar"></i></a>
-          <input type="text" name="date-in" value="24 Апреля 2016">
+          <input type="text" class="trip-date" name="date-in" value="24 Апреля 2016">
         </label>
         <label class="date">Дата выезда:
           <a href="#"><i class="out-calendar calendar"></i></a>
-          <input type="text" name="date-out" value="4 Июля 2016">
+          <input type="text" class="trip-date" name="date-out" value="4 Июля 2016">
         </label>
         <div class="half-width adult">
-          <label><span>Взрослые:</span>
+          <label for="adult-quantity"><span>Взрослые:</span></label>
             <button type="button" class="minus"></button>
-            <input type="number" name="" value="2">
+            <input type="text" id="adult-quantity" class="quantity" value="2">
             <button type="button" class="plus"></button>
-          </label>
         </div>
         <div class="half-width child">
-          <label><span>Дети:</span>
+          <label for="child-quantity"><span>Дети:</span></label>
             <button type="button" class="minus"></button>
-            <input type="number" name="" value="0">
+            <input type="text" id="child-quantity" class="quantity" value="0">
             <button type="button" class="plus"></button>
-          </label>
         </div>
         <input class="find-btn" type="submit" value="Найти">
       </form>

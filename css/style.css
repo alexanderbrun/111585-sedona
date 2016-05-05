@@ -35,9 +35,15 @@ ul li {
   list-style-type: none;
   font-weight: bold;
 }
-nav a {
+.main-navigation a {
   text-decoration: none;
   color: black;
+}
+.main-navigation a:hover {
+  color:#81b3d2;
+}
+.main-navigation a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 .container {
   width: 1200px;
@@ -222,7 +228,7 @@ nav a {
 .adult span {
   margin-right: 40px;
 }
-.main-form input[type="text"] {
+.main-form .trip-date {
   width: 346px;
   height: 38px;
   padding-left: 14px;
@@ -233,11 +239,11 @@ nav a {
   box-sizing: border-box;
   cursor: pointer;
 }
-.main-form input[type="text"]:hover {
+.main-form .trip-date:hover {
   background-color: #ebebeb;
   border: 2px solid #ebebeb;
 }
-.main-form input[type="text"]:focus {
+.main-form .trip-date:focus {
   background-color: #ffffff;
 }
 .calendar {
@@ -248,10 +254,6 @@ nav a {
   width: 21px;
   height: 22px;
   background-position: -230px -5px;
-  /*outline: 1px solid red;*/
-}
-.out-calendar {
-  /*transform: translate(428px, -59px);*/
 }
 .calendar:hover {
   width: 21px;
@@ -263,7 +265,7 @@ nav a {
   height: 22px;
   background-position: -210px -37px;
 }
-.main-form input[type="number"] {
+.main-form .quantity {
   width: 38px;
   height: 38px;
   background-color: #f2f2f2;
@@ -272,7 +274,7 @@ nav a {
   text-align: center;
   box-sizing: border-box;
   vertical-align: middle;
-  text-align: right;
+  cursor: pointer;
 }
 .main-form button[type="button"] {
   width: 38px;
@@ -290,21 +292,6 @@ nav a {
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
 }
-.plus::before {
-  width: 11px;
-  height: 11px;
-  background-position: -312px -173px;
-}
-.plus:hover::before {
-  width: 11px;
-  height: 11px;
-  background-position: -142px -194px;
-}
-.plus:active::before {
-  width: 11px;
-  height: 11px;
-  background-position: -121px -194px;
-}
 .minus::before {
   width: 12px;
   height: 3px;
@@ -320,8 +307,20 @@ nav a {
   height: 3px;
   background-position: -268px -173px;
 }
-button[type="button"]:first-child {
-  margin-left: 10px;
+.plus::before {
+  width: 11px;
+  height: 11px;
+  background-position: -312px -173px;
+}
+.plus:hover::before {
+  width: 11px;
+  height: 11px;
+  background-position: -142px -194px;
+}
+.plus:active::before {
+  width: 11px;
+  height: 11px;
+  background-position: -121px -194px;
 }
 input[type="submit"] {
   width: 458px;
@@ -452,8 +451,6 @@ input[type="submit"]:active {
 }
 .options form {
   display: flex;
-  /*min-height: 217px;*/
-  /*padding: 0 72px;*/
   justify-content: space-between;
 }
 .options fieldset {
@@ -682,16 +679,6 @@ input[type="checkbox"]:checked:disabled + label::before {
   background-image: url(../img/spritesheet.png);
   width: 11px;
   height: 10px;
-  background-position: -167px -5px;
-}
-.btn-down:hover {
-  width: 11px;
-  height: 10px;
-  background-position: -209px -5px;
-}
-.btn-down:active {
-  width: 11px;
-  height: 10px;
   background-position: -188px -5px;
 }
 .filters-sorting a,
@@ -710,10 +697,14 @@ input[type="checkbox"]:checked:disabled + label::before {
   color: #000000;
   border: none;
 }
+.filters-sorting .active-link,
+.filters-sorting .active-link:visited {
+  color: #81b3d2;
+  border: none;
+}
 .filters span {
   font-size: 12px;
   line-height: 18px;
-  font-weight: bold;
   padding-right: 40px;
 }
 .filters div:nth-child(2) {
