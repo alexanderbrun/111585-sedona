@@ -45,6 +45,16 @@ ul li {
 .main-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
+.main-navigation .active-menu {
+  text-decoration: none;
+  color: #766357;
+}
+.main-navigation .active-menu:hover {
+  color:#604e43;
+}
+.main-navigation .active-menu:active {
+  color: rgba(118, 99, 87, 0.3);
+}
 .container {
   width: 1200px;
   margin: 0 auto;
