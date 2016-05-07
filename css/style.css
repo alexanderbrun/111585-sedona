@@ -1,7 +1,7 @@
 body {
   text-transform: uppercase;
   color: #000000;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: 21px;
   background-color: #f2f2f2;
@@ -323,10 +323,10 @@ ul li {
   margin-right: 40px;
 }
 .main-form .trip-date {
-  width: 346px;
+  width: 345px;
   height: 38px;
-  padding-left: 14px;
-  margin-left: 16px;
+  padding-left: 12px;
+  margin-left: 15px;
   background-color: #f2f2f2;
   border: 2px solid #f2f2f2;
   margin-bottom: 29px;
@@ -342,8 +342,8 @@ ul li {
 }
 .calendar {
   position: absolute;
-  -webkit-transform: translate(333px, 8px);
-          transform: translate(333px, 8px);
+  -webkit-transform: translate(331px, 8px);
+          transform: translate(331px, 8px);
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
   width: 21px;
@@ -371,6 +371,13 @@ ul li {
   vertical-align: middle;
   cursor: pointer;
 }
+.main-form .quantity:hover {
+  background-color: #ebebeb;
+  border: 2px solid #ebebeb;
+}
+.main-form .quantity:focus {
+  background-color: #ffffff;
+}
 .main-form button[type="button"] {
   width: 38px;
   height: 38px;
@@ -379,14 +386,17 @@ ul li {
   outline: none;
   vertical-align: middle;
   cursor: pointer;
+  position: relative;
 }
 .main-form button[type="button"]::before {
   content: "";
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   background-image: url("../img/spritesheet.png");
   background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .minus::before {
   width: 12px;
@@ -937,6 +947,7 @@ article {
 }
 .item-description div {
   display: inline-block;
+  vertical-align: top;
   width: 110px;
   margin-top: -8px;
   margin-right: 2px;

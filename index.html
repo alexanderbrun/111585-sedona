@@ -141,7 +141,7 @@
       <p>
         Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
-      <a class="brown-btn" href="#">Поиск гостиницы в Седоне</a>
+      <a class="brown-btn" href="form.html">Поиск гостиницы в Седоне</a>
     </section>
     <section class="map">
       <form class="main-form" action="#" method="post" style="">
@@ -186,28 +186,6 @@
       </div>
     </footer>
   </div>
-  <script type="text/javascript">
-    var link = document.querySelector(".brown-btn");
-    var popup = document.querySelector(".main-form");
-    var date = popup.querySelector("[name=date-in]");
-    var form = document.querySelector("form");
-    var date2 = popup.querySelector("[name=date-out]");
-
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.toggle("main-form-show");
-      popup.classList.remove("main-form-error");
-      date.focus();
-    });
-
-    form.addEventListener("submit", function(event) {
-      if (!date.value || !date2.value) {
-         event.preventDefault();
-         popup.classList.remove("main-form-error");
-         popup.offsetWidth = popup.offsetWidth;
-         popup.classList.add("main-form-error");
-       }
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>
