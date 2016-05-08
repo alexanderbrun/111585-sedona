@@ -111,17 +111,17 @@ ul li {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
- .index-logo img:first-child {
-   margin-top: 76px;
-   margin-bottom: 23px;
+.index-logo img:first-child {
+  margin-top: 76px;
+  margin-bottom: 23px;
 }
 .intro {
-   padding-top: 46px;
-   padding-bottom: 39px;
-   text-align: center;
+  padding-top: 46px;
+  padding-bottom: 39px;
+  text-align: center;
  }
- .intro h1 {
-   margin-bottom: 30px;
+.intro h1 {
+  margin-bottom: 30px;
  }
 .reasons {
   display: -webkit-box;
@@ -650,6 +650,7 @@ input[type="submit"]:active {
   top: -12px;
   right: -10px;
   font-size: 14px;
+  outline: 1px solid red;
 }
 .price-select::after {
   content: "";
@@ -800,7 +801,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   display: flex;
   padding-left: 30px;
 }
-.filters-sorting ul {
+.filters-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -819,7 +820,7 @@ input[type="checkbox"]:checked:disabled + label::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.filters-sorting ul li {
+.filters-list li {
   padding-right: 34px;
   position: relative;
   top: -2px;
@@ -928,20 +929,20 @@ article {
   margin-left: 30px;
   padding-bottom: 10px;
 }
-.item h1 a,
-.item h1 a:visited {
+.hotel-name a,
+.hotel-name a:visited {
   text-decoration: none;
   color: black;
   margin-left: -15px;
 }
-.item h1 a:hover {
+.hotel-name a:hover {
   color: #8bb9d5;
 }
-.item h1 a:active {
+.hotel-name a:active {
   color: #000000;
   opacity: 0.3;
 }
-.item h1 {
+.hotel-name {
   text-align: left;
   margin-top: 25px;
   max-width: 700px;
