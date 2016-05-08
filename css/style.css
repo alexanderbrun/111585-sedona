@@ -81,7 +81,7 @@ ul li {
   margin-right: 230px;
   margin-left: -15px;
 }
-.main-header{
+.main-header {
   position: relative;
 }
 .logo {
@@ -137,11 +137,11 @@ ul li {
   width: 400px;
   text-align: center;
 }
-.reasons-blue h2{
+.reasons-blue h2 {
   margin-top: 54px;
   margin-bottom: 24px;
 }
-.reasons-blue p{
+.reasons-blue p {
   margin-top: 21px;
 }
 .reasons-blue {
@@ -168,7 +168,7 @@ ul li {
   width: 400px;
   text-align: center;
 }
-.services-item h2{
+.services-item h2 {
   margin: 23px 0;
 }
 .reasons-gray {
@@ -200,7 +200,7 @@ ul li {
           align-items: center;
   text-align: center;
 }
-.interest h3{
+.interest h3 {
   font-size: 30px;
   line-height: 24px;
   margin-top: 56px;
@@ -239,7 +239,6 @@ ul li {
 /* ФОРМА ГЛАВНОЙ*/
 .map {
   background: #f2f1ef url(../img/map.png);
-  /*padding-bottom: 78px;*/
   position: relative;
   line-height: 0;
   min-height: 593px;
@@ -499,7 +498,7 @@ input[type="submit"]:active {
 .footer-hashtag a:link,
 .footer-hashtag a:hover,
 .footer-hashtag a:active,
-.footer-hashtag a:visited{
+.footer-hashtag a:visited {
   text-decoration: none;
   color: black;
   font-size: 21px;
@@ -942,7 +941,7 @@ article {
   color: #000000;
   opacity: 0.3;
 }
-.item h1{
+.item h1 {
   text-align: left;
   margin-top: 25px;
   max-width: 700px;
@@ -966,27 +965,24 @@ article {
   display: block;
   margin-bottom: 18px;
 }
-
 .details {
   background-color: #81b3d2;
 }
-
 .details:hover {
   color: #fff;
   background-color: #669ec0;
 }
-
 .details:active {
   background-color: #5496bd;
   color: rgba(255,255,255,0.3);
 }
 .book {
-  background-color: #766357; }
-
+  background-color: #766357;
+}
 .book:hover {
   color: #fff;
-  background-color: #604e43; }
-
+  background-color: #604e43;
+}
 .book:active {
   color: #fff;
   background-color: #503e33;
