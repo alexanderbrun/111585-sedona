@@ -516,6 +516,9 @@ input[type="submit"]:active {
   margin-left: 2px;
   font-size: 0;
   position: relative;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
 }
 .social-btn::before {
   content: "";
@@ -595,22 +598,15 @@ input[type="submit"]:active {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+              -ms-flex-pack: end;
+                  justify-content: flex-end;
 }
 .options fieldset {
   border: none;
   padding: 6px 0px;
-  padding-left: 70px;
-}
-.options fieldset:last-child {
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  padding-left: 240px;
+  box-sizing: border-box;
 }
 .options input[type="text"] {
   color: #ffffff;
@@ -621,6 +617,20 @@ input[type="submit"]:active {
   font-size: 14px;
   margin-left: 4px;
   margin-right: 28px;
+}
+.options fieldset:nth-child(1) {
+  width: 321px;
+  padding-left: 70px;
+}
+.options fieldset:nth-child(2) {
+  flex-grow: 2;
+}
+.options fieldset:nth-child(3) {
+  padding-right: 70px;
+}
+.price-title {
+  position: relative;
+  left: -10px;
 }
 .options .half-width:last-child {
   padding-right: 20px
@@ -648,9 +658,7 @@ input[type="submit"]:active {
           justify-content: space-between;
   position: relative;
   top: -12px;
-  right: -10px;
   font-size: 14px;
-  outline: 1px solid red;
 }
 .price-select::after {
   content: "";
@@ -671,11 +679,10 @@ input[type="submit"]:active {
   border: 2px solid #ffffff;
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.0);
-  margin-left: 95px;
+  margin-left: 85px;
   outline: none;
   font-size: 14px;
   line-height: 21px;
-  vertical-align: middle;
 }
 .options button:hover {
   color: #000000;
@@ -686,7 +693,7 @@ input[type="checkbox"] {
 }
 input[type="checkbox"] + label {
   display: block;
-  padding-left: 38px;
+  padding-left: 40px;
   cursor: pointer;
   position : relative;
   font-size: 14px;
@@ -737,19 +744,12 @@ input[type="checkbox"]:checked:disabled + label::before {
   top: -1px;
   left: -1px;
 }
-.options fieldset:nth-child(2) {
-  padding-left: 116px;
-}
-.options fieldset:nth-child(3) {
-  padding-left: 335px;
-}
 .options .half-width{
   font-size: inherit;
 }
 .range-controls {
   position: relative;
   margin-bottom: 32px;
-  left: 11px;
 }
 .range-controls .scale {
   margin-top: 8px;
@@ -758,7 +758,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   background: rgba(255, 255, 255, 0.3);
 }
 .range-controls .bar {
-  width: 80%;
+  width: 82%;
   height: 2px;
   background: #ffffff;
 }
@@ -781,7 +781,7 @@ input[type="checkbox"]:checked:disabled + label::before {
   left: 0;
 }
 .range-toggle-max {
-  left: 63%;
+  left: 80%;
 }
 /*ФИЛЬТРЫ*/
 .filters {
@@ -933,7 +933,6 @@ article {
 .hotel-name a:visited {
   text-decoration: none;
   color: black;
-  margin-left: -15px;
 }
 .hotel-name a:hover {
   color: #8bb9d5;
@@ -947,7 +946,8 @@ article {
   margin-top: 25px;
   max-width: 700px;
 }
-.item-description a {
+.details,
+.book {
   text-decoration: none;
   font-weight: bold;
   padding: 5px 16px;
