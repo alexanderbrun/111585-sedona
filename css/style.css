@@ -62,24 +62,31 @@ ul li {
   box-shadow: 0 0 15px 0px rgba(0,0,0,0.2);
 }
 .main-navigation ul {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 17px 72px;
-  padding-bottom: 18px;
+  padding: 17px 0 18px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .main-navigation li {
+  box-sizing: border-box;
   width: 240px;
   text-align: center;
 }
-.main-navigation li:nth-child(1) {
+.main-navigation li:nth-child(1),
+.main-navigation li:nth-child(6) {
+  padding-left: 72px;
   text-align: left;
 }
-.main-navigation li:nth-child(2) {
+.main-navigation li:nth-child(2),
+.main-navigation li:nth-child(6) {
   margin-right:240px;
 }
-.main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(4),
+.main-navigation li:nth-child(8) {
+  padding-right: 72px;
   text-align: right;
 }
 .main-header {
